@@ -19,7 +19,7 @@ const genModuleLess = (parents, { isModule, filterFileLess }) => {
   lessArray = [];
   glob
     .sync(winPath(`${parents}/**/**.less`), {
-      ignore: ['**/node_modules/**', '**/dist/**', '**/es/**', '**/lib/**', '**/_site/**'],
+      ignore: ['**/node_modules/**', '**/dist/**', '**/es/**', '**/_site/**'],
     })
     .sort((a, b) => lessOrder(a) - lessOrder(b))
     .filter(filePath => {
